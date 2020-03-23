@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ProgressView.swift
 //  Audio_book_cell
 //
 //  Created by Ivan Ivanov on 23.03.2020.
@@ -8,14 +8,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ProgressView: View {
     var body: some View {
-        AudioBookCell()
+        Rectangle()
+            .fill(Color.orange)
+            .frame(height: 5)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ProgressView()
     }
 }
