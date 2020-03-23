@@ -9,10 +9,18 @@
 import SwiftUI
 
 struct ProgressView: View {
+    var progressPercent = 1.0
     var body: some View {
-        Rectangle()
-            .fill(Color.orange)
-            .frame(height: 5)
+        ZStack {
+            GeometryReader { geo in
+                Rectangle()
+                    .fill(Color.gray)
+                    .frame(height: 5)
+                Rectangle()
+                    .fill(Color.orange)
+                    .frame(width: geo.size.width * CGFloat(self.progressPercent), height: 5)
+            }
+        }
     }
 }
 

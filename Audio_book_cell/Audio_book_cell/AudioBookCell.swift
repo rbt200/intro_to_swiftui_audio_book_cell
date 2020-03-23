@@ -12,7 +12,7 @@ struct AudioBookCell: View {
     var body: some View {
         VStack {
             Image("sample1")
-            ProgressView()
+            ProgressView(progressPercent: 0.2)
         }
         .frame(width: 200)
     }
